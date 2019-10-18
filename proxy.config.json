@@ -1,5 +1,5 @@
 {
-   "/api/*": {
+   "/emp*": {
      "target": "http://18.191.45.245:8080",
      "secure": false,
      "pathRewrite": {"^/emp*" : ""},
