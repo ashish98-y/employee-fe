@@ -4,7 +4,7 @@
       - name: docker network setup
         docker_network:
             name: webapp
-            state:present
+            state: present
       - name: run fe container
         docker_container:
             name: feapp
