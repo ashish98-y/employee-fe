@@ -3,7 +3,7 @@ FROM node:10.16-alpine
 WORKDIR /app/build
 
 COPY . .
-RUN npm audit fix --force
+#RUN npm audit fix --force
 RUN npm install
 
 RUN npm install @angular/cli@7.3.9
