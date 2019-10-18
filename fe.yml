@@ -1,4 +1,15 @@
 - hosts: feapp
   become: True
   tasks:
-      - name: 
+      - name: docker network setup
+        docker_network:
+            name: webapp
+            state:present
+      - name: run fe container
+        docker_container:
+            name: feapp
+            image: 98ashish/feapp:1.0
+            ports: 
+                - "4200:4200"
+            networks:
+                - name: webapp
